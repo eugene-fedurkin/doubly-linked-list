@@ -49,6 +49,9 @@ class LinkedList {
             let prevNode = nextNode.prev;
             prevNode.next = node;
             nextNode.prev = node;
+            node.prev = prevNode;
+            node.next = nextNode;
+            this.length++;
             return this;
         }
     }
